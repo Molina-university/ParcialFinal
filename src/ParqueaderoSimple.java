@@ -38,10 +38,10 @@ class Bicicleta extends Vehiculo {
 
 // Clase para manejar precios
 class Tarifas {
-    private final int PRECIO_CARRO = 4000;
-    private final int PRECIO_MOTO = 2000;
-    private final int PRECIO_BICI = 500;
-    private final int RECARGO_NOCTURNO = 2000;
+    public final int PRECIO_CARRO = 2000;
+    public final int PRECIO_MOTO = 1000;
+    public final int PRECIO_BICI = 200;
+    public final int RECARGO_NOCTURNO = 1000;
     
     // MÉTODO REUTILIZABLE 1
     public int calcularPrecio(String tipo, boolean esMensual, boolean esNocturno) {
@@ -85,10 +85,10 @@ class Tarifas {
 
 // Clase para cada vehículo registrado
 class Registro {
-    private Vehiculo vehiculo;
-    private LocalDateTime entrada;
-    private boolean esMensual;
-    private boolean esNocturno;
+    public Vehiculo vehiculo;
+    public LocalDateTime entrada;
+    public boolean esMensual;
+    public boolean esNocturno;
     
     public Registro(Vehiculo vehiculo, boolean esMensual, boolean esNocturno) {
         this.vehiculo = vehiculo;
@@ -113,10 +113,10 @@ class Registro {
 
 // Clase principal del parqueadero
 class Parqueadero {
-    private ArrayList<Registro> vehiculos; // ARRAYLIST
-    private Tarifas tarifas;
-    private double[] dineroTipos; // [carros, motos, bicis] - ARREGLO
-    private final int CUPOS_TOTALES = 200;
+    public ArrayList<Registro> vehiculos; // ARRAYLIST
+    public Tarifas tarifas;
+    public double[] dineroTipos; // [carros, motos, bicis] - ARREGLO
+    public final int CUPOS_TOTALES = 200;
     
     public Parqueadero() {
         vehiculos = new ArrayList<>();
@@ -205,7 +205,7 @@ class Parqueadero {
         System.out.println("Vehículo no encontrado");
     }
     
-    private void registrarDinero(String tipo, double monto) {
+    public void registrarDinero(String tipo, double monto) {
         // SWITCH para categorizar dinero
         switch (tipo) {
             case "Carro": dineroTipos[0] += monto; break;
@@ -265,8 +265,8 @@ class Parqueadero {
 
 // CLASE PRINCIPAL (MAIN)
 public class ParqueaderoSimple {
-    private static Parqueadero parqueadero = new Parqueadero();
-    private static Scanner scanner = new Scanner(System.in);
+    public static Parqueadero parqueadero = new Parqueadero();
+    public static Scanner scanner = new Scanner(System.in);
     
     public static void main(String[] args) {
         System.out.println("-----------------------------");
@@ -303,7 +303,7 @@ public class ParqueaderoSimple {
     }
 
 // Se que hay muchos printlns, pero es para que se vea mas bonito el programa    
-    private static void mostrarMenu() {
+    public static void mostrarMenu() {
         System.out.println("");
         System.out.println("-----------------------------");
         System.out.println("MENÚ PRINCIPAL");
@@ -320,7 +320,7 @@ public class ParqueaderoSimple {
         System.out.print("Opción: ");
     }
     
-    private static void ingresarVehiculo() {
+    public static void ingresarVehiculo() {
         System.out.println("");
         System.out.println("-----------------------------");
         System.out.println("Ingresar Vehículo");
@@ -349,7 +349,7 @@ public class ParqueaderoSimple {
                 return;
             }
             
-            System.out.print("¿Mensualidad? (s/n): ");
+            System.out.print("¿Mensualidad? (si/no): ");
             boolean esMensual = scanner.nextLine().toLowerCase().startsWith("s");
             
             Vehiculo vehiculo = null;
@@ -367,7 +367,7 @@ public class ParqueaderoSimple {
         }
     }
     
-    private static void sacarVehiculo() {
+    public static void sacarVehiculo() {
         System.out.println("");
         System.out.println("-----------------------------");
         System.out.println("Sacar Vehículo");
@@ -385,7 +385,7 @@ public class ParqueaderoSimple {
         parqueadero.sacarVehiculo(placa);
     }
     
-    private static void buscarVehiculo() {
+    public static void buscarVehiculo() {
         System.out.println("");
         System.out.println("-----------------------------");
         System.out.println("Buscar Vehículo");
