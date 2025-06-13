@@ -347,4 +347,4 @@ ________________________________________________________________________________
 # Sistema de Parqueadero ParkHub
 
 ## Diagrama UML
-![Diagrama UML del Sistema](./images/UML ParqueaderoParkhub.jpeg)
+![Diagrama UML del Sistema](./imagenes/UML ParqueaderoParkhub.jpeg)
