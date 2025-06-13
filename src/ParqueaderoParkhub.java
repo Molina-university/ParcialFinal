@@ -54,7 +54,7 @@ class Tarifas {
             case "Bicicleta": precio = PRECIO_BICI; break;
         }
         
-        // CONDICIONALES para modificar precio
+        // Condicionales para determinar el precio
         if (esMensual) {
             precio = (int)(precio * 30 * 0.75); // 25% descuento mensual
         } else if (esNocturno) {
