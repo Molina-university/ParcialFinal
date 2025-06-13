@@ -264,7 +264,7 @@ class Parqueadero {
 }
 
 // CLASE PRINCIPAL (MAIN)
-public class ParqueaderoSimple {
+public class ParqueaderoParkhub {
     public static Parqueadero parqueadero = new Parqueadero();
     public static Scanner scanner = new Scanner(System.in);
     
