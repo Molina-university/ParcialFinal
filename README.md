@@ -66,7 +66,6 @@ ________________________________________________________________________________
 | `Parqueadero`       | Clase principal que gestiona todas las operaciones         |
 | `ParqueaderoParhub` | Contiene el método main y la interfaz de usuario           |
 
-
 --------------------------------------------------------------------------------------------------------------------------
 
 ## 🚙 Clase `Vehiculo` (Abstracta)
